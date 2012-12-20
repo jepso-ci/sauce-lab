@@ -1,0 +1,21 @@
+{
+  "name": "sauce-lab",
+  "version": "0.0.0",
+  "description": "Run a single test file on sauce labs.  This just takes care of polling for the result.",
+  "main": "index.js",
+  "dependencies": {
+    "debug": "~0.7.0",
+    "q": "~0.8.11",
+    "wd": "~0.0.27"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jepso-ci/sauce-lab.git"
+  },
+  "author": "",
+  "license": "MIT"
+}
