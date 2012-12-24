@@ -20,8 +20,9 @@ function run(config) {
   var init = Q.nfbind(remote.init.bind(remote));
   var get = Q.nfbind(remote.get.bind(remote));
   var exec = Q.nfbind(remote.eval.bind(remote));
+  var quit = remote.quit.bind(remote);
   function poll() {
-    exec(code)
+    return exec(code)
       .then(function (result) {
         return parse(result);
       })
@@ -29,11 +30,19 @@ function run(config) {
         return parsed === null ? poll() : parsed;
       });
   }
-  return init(conf)
+
+  return init(browser)
     .then(function () {
       return get(url);
     })
     .then(function () {
       return poll();
+    })
+    .then(function (v) {
+      quit();
+      return v;
+    }, function (e) {
+      quit();
+      throw v;
     });
 }
