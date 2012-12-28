@@ -43,6 +43,6 @@ function run(config) {
       return v;
     }, function (e) {
       quit();
-      throw v;
+      throw e;
     });
 }
