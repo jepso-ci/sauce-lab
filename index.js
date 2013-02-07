@@ -21,10 +21,13 @@ function run(config) {
   var get = Q.nfbind(remote.get.bind(remote));
   var exec = Q.nfbind(remote.eval.bind(remote));
   var quit = remote.quit.bind(remote);
+
+  var sessionID;
+
   function poll() {
     return exec(code)
       .then(function (result) {
-        return parse(result);
+        return parse(result, sessionID, remote);
       })
       .then(function (parsed) {
         return parsed === null ? poll() : parsed;
@@ -32,7 +35,8 @@ function run(config) {
   }
 
   return init(browser)
-    .then(function () {
+    .then(function (id) {
+      sessionID = id;
       return get(url);
     })
     .then(function () {
