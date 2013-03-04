@@ -4,18 +4,21 @@
   "description": "Run a single test file on sauce labs.  This just takes care of polling for the result.",
   "main": "index.js",
   "dependencies": {
-    "debug": "~0.7.0",
-    "q": "~0.8.11",
-    "wd": "~0.0.27"
+    "debug": "~0.7",
+    "q": "~0.9",
+    "wd": "~0.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha-as-promised": "~1.2",
+    "mocha": "~1.8"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -R spec"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jepso-ci/sauce-lab.git"
   },
-  "author": "",
+  "author": "ForbesLindesay",
   "license": "MIT"
 }

@@ -11,7 +11,7 @@ function run(config) {
 
   var browser = config.browser;
   browser.name = config.name;
-  browser.tags = config.tags;
+  browser.tags = config.tags || [];
 
   var code = config.code;
   var parse = config.parse;
