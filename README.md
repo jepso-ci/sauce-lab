@@ -1,5 +1,7 @@
 # sauce-lab
 
+[![Dependency Status](https://gemnasium.com/jepso-ci/sauce-lab.png)](https://gemnasium.com/jepso-ci/sauce-lab)
+
   Run a single test file on sauce labs.  This just takes care of polling for the result.
 
 ## Run(config)
