@@ -1,5 +1,5 @@
 # sauce-lab
-[![Build Status](https://travis-ci.org/jepso-ci/sauce-lab.png?branch=master)](https://travis-ci.org/jepso-ci/sauce-lab)
+[![Build Status](https://img.shields.io/travis/jepso-ci/sauce-lab/master.svg)](https://travis-ci.org/jepso-ci/sauce-lab)
 [![Dependency Status](https://img.shields.io/david/jepso-ci/sauce-lab.svg)](https://david-dm.org/jepso-ci/sauce-lab)
 
   Run a single test file on sauce labs.  This just takes care of polling for the result.
